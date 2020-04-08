@@ -7,8 +7,9 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import './shim.js'
-import crypto from 'crypto'
+import './shim.js';
+
+global.crypto = require('crypto');
 
 import {
   Header,
@@ -19,6 +20,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
+  console.log(" ~~ crypto test ~~ ", crypto.randomBytes(32).toString('hex'))
+
   return (
     <>
       <StatusBar barStyle="dark-content" />

@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "node_modules/.bin/rn-nodeify --install crypto --hack"
   },
   "dependencies": {
     "@tradle/react-native-http": "^2.0.0",
@@ -15,10 +16,12 @@
     "browserify-zlib": "^0.1.4",
     "console-browserify": "^1.1.0",
     "constants-browserify": "^1.0.0",
+    "crypto-browserify": "^3.12.0",
     "dns.js": "^1.0.1",
     "domain-browser": "^1.1.1",
     "events": "^1.0.0",
     "https-browserify": "0.0.1",
+    "path": "^0.12.7",
     "path-browserify": "0.0.0",
     "process": "^0.11.0",
     "punycode": "^1.2.4",
@@ -32,7 +35,7 @@
     "react-native-tcp": "^3.2.1",
     "react-native-udp": "^2.1.0",
     "readable-stream": "^1.0.33",
-    "stream-browserify": "^1.0.0",
+    "stream-browserify": "^2.0.2",
     "string_decoder": "^0.10.31",
     "timers-browserify": "^1.0.1",
     "tty-browserify": "0.0.0",
@@ -45,11 +48,13 @@
     "@babel/runtime": "^7.9.2",
     "@react-native-community/eslint-config": "^1.0.0",
     "babel-jest": "^25.2.6",
+    "babel-plugin-rewrite-require": "^1.14.5",
+    "babel-preset-react-native": "^4.0.1",
     "eslint": "^6.8.0",
     "jest": "^25.2.7",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.11.0",
-    "rn-nodeify": "tradle/rn-nodeify"
+    "rn-nodeify": "github:tradle/rn-nodeify"
   },
   "jest": {
     "preset": "react-native"

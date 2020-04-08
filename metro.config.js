@@ -4,11 +4,12 @@
  *
  * @format
  */
+var path = require('path');
 
 module.exports = {
   resolver: {
     extraNodeModules: {
-      crypto: require('react-native-crypto'),
+      crypto: path.resolve(__dirname, 'extra_modules/crypto'),
     },
   },
   transformer: {
