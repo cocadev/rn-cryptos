@@ -56,11 +56,6 @@ target 'crypto' do
 
   pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
 
-  target 'cryptoTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   use_native_modules!
 
   # Enables Flipper.
@@ -70,14 +65,5 @@ target 'crypto' do
   add_flipper_pods!
   post_install do |installer|
     flipper_post_install(installer)
-  end
-end
-
-target 'crypto-tvOS' do
-  # Pods for crypto-tvOS
-
-  target 'crypto-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 end
